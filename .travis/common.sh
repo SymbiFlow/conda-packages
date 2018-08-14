@@ -48,7 +48,7 @@ export CONDA_PATH="$BASE_PATH/conda"
 mkdir -p "$BASE_PATH"
 export PATH="$PATH:$CONDA_PATH/bin"
 
-if [ -z "$GITREV" ]; then
+if [ -z "$GITREV" -o x"$GITREV" = x"unknown" ]; then
 	export GITREV="$(git describe --long 2>/dev/null || echo "unknown")"
 	echo "Setting GITREV to '$GITREV'"
 fi
