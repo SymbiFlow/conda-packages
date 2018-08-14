@@ -36,15 +36,15 @@ install:
 
 env:
   # riscv32 toolchain
-  - PACKAGE=riscv32/binutils    CONDA_BUILD_VERSION=2.1.17
+  - PACKAGE=riscv32/binutils
   # tools
-  - PACKAGE=openocd             CONDA_BUILD_VERSION=2.1.17
-  - PACKAGE=flterm              CONDA_BUILD_VERSION=2.1.17
+  - PACKAGE=openocd
+  - PACKAGE=flterm
   # verilog tools
   - PACKAGE=arachne-pnr
   - PACKAGE=icestorm
   - PACKAGE=iverilog
-  - PACKAGE=verilator           CONDA_BUILD_VERSION=2.1.17
+  - PACKAGE=verilator
   - PACKAGE=vtr                 CONDA_CHANNELS=conda-forge
   - PACKAGE=yosys
 

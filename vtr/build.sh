@@ -7,8 +7,9 @@ if [ x"$TRAVIS" = xtrue ]; then
 	CPU_COUNT=2
 fi
 
-
-make V=1 CMAKE_PARAMS="-DCMAKE_INSTALL_PREFIX=${PREFIX} -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON" -j$CPU_COUNT
+mkdir build
+cmake -DCMAKE_INSTALL_PREFIX=${PREFIX} ..
+make -j$CPU_COUNT VERBOSE=1
 make test
 make install
 
