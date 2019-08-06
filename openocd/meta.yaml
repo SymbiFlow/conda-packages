@@ -26,6 +26,18 @@ build:
     - CI
     - TRAVIS
 
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - pkg-config
+  host:
+    - libftdi
+    - libusb
+  run:
+    - libftdi
+    - libusb
+
 test:
   commands:
     - openocd -v
