@@ -43,6 +43,6 @@ test:
     - test/hello_world.v
 
 about:
-  home: http://www.veripool.org/projects/verilator/wiki/Intro
+  home: https://verilator.org
   license: LGPL v3
   summary: 'Verilator is the fastest free Verilog HDL simulator, and beats most commercial simulators.'

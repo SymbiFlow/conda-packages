@@ -3,12 +3,8 @@
 set -e
 set -x
 
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
-sudo apt update
-sudo apt install -y gcc-8 g++-8
-
-export CC=gcc-8
-export CXX=g++-8
+export CC=gcc-${USE_SYSTEM_GCC_VERSION}
+export CXX=g++-${USE_SYSTEM_GCC_VERSION}
 
 mkdir build && cd build
 

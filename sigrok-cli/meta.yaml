@@ -1,8 +1,12 @@
+{% set version = '%s_%04i_%s'|format(GIT_DESCRIBE_TAG|replace('sigrok-cli-', '')|replace('-v','.') or '0.X', GIT_DESCRIBE_NUMBER|int, GIT_DESCRIBE_HASH or 'gUNKNOWN') %}
 package:
   name: sigrok-cli
-  version: {{ GIT_FULL_HASH }}
+  version: {{ version }}
 
 source:
+  - git_url: https://github.com/SymbiFlow/sigrok-cli
+    git_rev: master
+    folder: sigrok-cli
   - git_url: https://github.com/sigrokproject/libserialport
     git_rev: master
     folder: libserialport
@@ -12,9 +16,6 @@ source:
   - git_url: https://github.com/sigrokproject/libsigrokdecode
     git_rev: master
     folder: libsigrokdecode
-  - git_url: https://github.com/sigrokproject/sigrok-cli
-    git_rev: master
-    folder: sigrok-cli
 
 build:
   number: {{ '1%04i00%s'|format(GIT_DESCRIBE_NUMBER|int, os.environ.get('DATESTR')) }}

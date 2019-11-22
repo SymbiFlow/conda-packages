@@ -1,6 +1,8 @@
+{% set version = '%s_%04i_%s'|format(GIT_DESCRIBE_TAG|replace('vpr-', '')|replace('-v','.')|replace('-rc','_rc') or '0.X', GIT_DESCRIBE_NUMBER|int, GIT_DESCRIBE_HASH or 'gUNKNOWN') %}
+
 package:
   name: odin_ii
-  version: {{ GIT_FULL_HASH }}
+  version: {{ version }}
 
 source:
   git_url: https://github.com/verilog-to-routing/vtr-verilog-to-routing

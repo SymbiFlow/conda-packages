@@ -7,15 +7,7 @@ addons:
     update: true
     packages:
     - realpath
-    - autoconf
-    - automake
     - build-essential
-    - gperf
-    - libftdi-dev
-    - libudev-dev
-    - libudev1
-    - libusb-1.0-0-dev
-    - libusb-dev
     - texinfo
 
 before_install:
@@ -44,9 +36,10 @@ env:
   - PACKAGE=zachjs-sv2v         CONDA_CHANNELS="conda-forge"
   - PACKAGE=odin_II             CONDA_CHANNELS="pkgw-forge,conda-forge"
   - PACKAGE=tree-sitter-verilog
-  - PACKAGE=slang               CONDA_CHANNELS="conda-forge"
+  - PACKAGE=slang               CONDA_CHANNELS="conda-forge"    USE_SYSTEM_GCC_VERSION="8"
   - PACKAGE=moore
   - PACKAGE=sv-parser
+  - PACKAGE=verible                                             USE_SYSTEM_GCC_VERSION="8"
   # protocol analyzers
   - PACKAGE=sigrok-cli          CONDA_CHANNELS="conda-forge"
 

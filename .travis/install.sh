@@ -3,6 +3,12 @@
 source $TRAVIS_BUILD_DIR/.travis/common.sh
 set -e
 
+if [ ! -z "$USE_SYSTEM_GCC_VERSION" ]; then
+	sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
+	sudo apt update
+	sudo apt install -y gcc-${USE_SYSTEM_GCC_VERSION} g++-${USE_SYSTEM_GCC_VERSION}
+fi
+
 # Getting the conda environment
 start_section "environment.conda" "Setting up basic ${YELLOW}conda environment${NC}"
 
