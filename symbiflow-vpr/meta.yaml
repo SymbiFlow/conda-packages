@@ -1,7 +1,7 @@
 {% set version = '%s_%04i_%s'|format(GIT_DESCRIBE_TAG|replace('v','') or '0.X', GIT_DESCRIBE_NUMBER|int, GIT_DESCRIBE_HASH or 'gUNKNOWN') %}
 
 package:
-  name: vtr
+  name: symbiflow-vpr
   version: {{ version }}
 
 source:
@@ -28,7 +28,7 @@ requirements:
     - fontconfig
     - ncurses
     - pkg-config
-    - readline <8
+    - readline
     - tk
     - xorg-libice
     - xorg-libsm
@@ -40,7 +40,7 @@ requirements:
     - tbb-devel
     - gtk3
   run:
-    - readline <8
+    - readline
     - tk
     - fontconfig
     - xorg-libx11

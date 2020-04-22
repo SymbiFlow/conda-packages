@@ -19,10 +19,10 @@ install:
  - ./.travis/install.sh
 
 env:
-  - PACKAGE=vtr
+  - PACKAGE=symbiflow-vpr
   - PACKAGE=libxml2
   - PACKAGE=libusb
-  - PACKAGE=yosys
+  - PACKAGE=symbiflow-yosys
   - PACKAGE=nextpnr
   - PACKAGE=nextpnr-xilinx
   - PACKAGE=openocd
@@ -44,7 +44,7 @@ env:
   - PACKAGE=verible             USE_SYSTEM_GCC_VERSION="8"
   # protocol analyzers
   - PACKAGE=sigrok-cli
-  - PACKAGE=yosys-plugins
+  - PACKAGE=symbiflow-yosys-plugins
   # metapackages
   - PACKAGE=symbiflow-toolchain-xray
 
