@@ -23,6 +23,8 @@ requirements:
     - pkg-config
     - python {{ python }}
     - gperftools
+    - libuuid
+    - swig
 
   host:
     - python {{ python }}
