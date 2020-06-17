@@ -21,6 +21,8 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
     - pkg-config
+    - python {{ python }}
+    - gperftools
 
   host:
     - python {{ python }}
