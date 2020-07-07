@@ -20,7 +20,7 @@ make config-conda-linux
 echo "PREFIX := $PREFIX" >> Makefile.conf
 
 make V=1 -j$CPU_COUNT
-make test
+make -j$CPU_COUNT test
 make install
 
 $PREFIX/bin/yosys -V
