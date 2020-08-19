@@ -52,6 +52,7 @@ export GIT_SSL_NO_VERIFY=1
 export GITREV="$(git describe --long 2>/dev/null || echo "unknown")"
 export CONDA_BUILD_ARGS=$PACKAGE
 export CONDA_OUT="$(conda render --output $CONDA_BUILD_ARGS 2> /dev/null | grep conda-bld | grep tar.bz2 | sed -e's/-[0-9]\+\.tar/*.tar/' -e's/-git//' | tr '\n' ';')"
+export UHDM_INTEGRATION_REV="$(git ls-remote https://github.com/alainmarcel/uhdm-integration.git HEAD | awk '{ print $1}')"
 
 echo "          GITREV: $GITREV"
 echo "      CONDA_PATH: $CONDA_PATH"
