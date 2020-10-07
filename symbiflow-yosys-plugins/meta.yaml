@@ -31,5 +31,5 @@ requirements:
     - iverilog
     - symbiflow-yosys
   run:
-    - symbiflow-yosys
+    - {{ pin_subpackage('symbiflow-yosys', exact=True) }}
 
