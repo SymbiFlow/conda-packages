@@ -32,7 +32,7 @@ echo "LDFLAGS='$LDFLAGS'"
 env
 
 # Where to get the SymbiFlow architecture install package.
-SYMBIFLOW_INSTALL_URL=https://storage.googleapis.com/symbiflow-arch-defs/artifacts/prod/foss-fpga-tools/symbiflow-arch-defs/presubmit/install/763/20201002-081640/symbiflow-arch-defs-install-cd3b2f35.tar.xz
+SYMBIFLOW_INSTALL_URL=https://storage.googleapis.com/symbiflow-arch-defs/artifacts/prod/foss-fpga-tools/symbiflow-arch-defs/presubmit/install/999/20201113-104856/symbiflow-arch-defs-install-d299ba77.tar.xz
 BUILD_ROOT=$PWD
 
 # This will take a while to download, so fork it and rejoin later.
