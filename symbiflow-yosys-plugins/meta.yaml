@@ -28,8 +28,6 @@ requirements:
     - tk
     - libffi
     - flex
-    - iverilog
-    - symbiflow-yosys
+    - yosys
   run:
-    - symbiflow-yosys
-
+    - yosys
