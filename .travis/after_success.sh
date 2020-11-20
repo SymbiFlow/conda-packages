@@ -6,9 +6,6 @@ set -e
 # Close the after_success fold travis has created already.
 travis_fold end after_success
 
-# Remove trailing ';' and split CONDA_OUT into array of packages
-IFS=';' read -r -a PACKAGES <<< "${CONDA_OUT%?}"
-
 start_section "package.contents" "${GREEN}Package contents...${NC}"
 for element in "${PACKAGES[@]}"
 do

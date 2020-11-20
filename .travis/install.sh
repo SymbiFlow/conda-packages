@@ -34,10 +34,6 @@ start_section "info.conda.config" "Info on ${YELLOW}conda config${NC}"
 $TRAVIS_BUILD_DIR/conda-env.sh config --show
 end_section "info.conda.config"
 
-start_section "info.conda.package" "Info on ${YELLOW}conda package${NC}"
-$TRAVIS_BUILD_DIR/conda-env.sh render --no-source $CONDA_BUILD_ARGS || true
-end_section "info.conda.package"
-
 $SPACER
 
 start_section "conda.copy" "${GREEN}Copying package...${NC}"
