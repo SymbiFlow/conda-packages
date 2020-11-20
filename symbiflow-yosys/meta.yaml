@@ -29,13 +29,13 @@ requirements:
     - readline
     - bison
     - tk
-    - libffi={{ environ.get('LIBFFI_VERSION') }}
+    - libffi
     - flex
     - iverilog
   run:
     - readline
     - tk
-    - libffi={{ environ.get('LIBFFI_VERSION') }}
+    - libffi
 
 about:
   home: http://www.clifford.at/yosys/
