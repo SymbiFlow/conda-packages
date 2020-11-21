@@ -1,8 +1,8 @@
 diff --git a/Makefile b/Makefile
-index d7ad493..5869e08 100644
+index 4882d9c..5869e08 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -7,9 +7,11 @@ CAPNP_PREFIX=$(shell dirname $(shell which capnp))/..
+@@ -7,6 +7,8 @@ CAPNP_PREFIX=$(shell dirname $(shell which capnp))/..
  CAPNP_CXX_FLAGS=-I $(CAPNP_PREFIX)/include -L $(CAPNP_PREFIX)/lib -lkj -lcapnp
  endif
  
@@ -10,8 +10,4 @@ index d7ad493..5869e08 100644
 +
  PREFIX ?= /usr/local
  
--CXX=g++
-+CXX ?= g++
- CXX_FLAGS=-std=c++14 $(CAPNP_CXX_FLAGS)
- 
- CAPNPC_JAVA_SOURCES=compiler/src/main/cpp/capnpc-java.c++
+ CXX ?= g++
