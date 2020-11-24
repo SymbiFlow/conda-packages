@@ -32,6 +32,7 @@ echo "LDFLAGS='$LDFLAGS'"
 env
 
 # Where to get the SymbiFlow architecture install package.
+#https://console.cloud.google.com/storage/browser/_details/symbiflow-arch-defs/artifacts/prod/foss-fpga-tools/symbiflow-arch-defs/presubmit/install/
 SYMBIFLOW_INSTALL_URL=https://storage.googleapis.com/symbiflow-arch-defs/artifacts/prod/foss-fpga-tools/symbiflow-arch-defs/presubmit/install/999/20201113-104856/symbiflow-arch-defs-install-d299ba77.tar.xz
 BUILD_ROOT=$PWD
 
