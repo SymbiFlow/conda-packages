@@ -32,8 +32,7 @@ echo "LDFLAGS='$LDFLAGS'"
 env
 
 # Where to get the SymbiFlow architecture install package.
-#https://console.cloud.google.com/storage/browser/_details/symbiflow-arch-defs/artifacts/prod/foss-fpga-tools/symbiflow-arch-defs/presubmit/install/
-SYMBIFLOW_INSTALL_URL=https://storage.googleapis.com/symbiflow-arch-defs/artifacts/prod/foss-fpga-tools/symbiflow-arch-defs/presubmit/install/999/20201113-104856/symbiflow-arch-defs-install-d299ba77.tar.xz
+SYMBIFLOW_INSTALL_URL=https://storage.googleapis.com/symbiflow-arch-defs/artifacts/prod/foss-fpga-tools/symbiflow-arch-defs/presubmit/install/1107/20201130-124744/symbiflow-arch-defs-install-1206b195.tar.xz
 BUILD_ROOT=$PWD
 
 # This will take a while to download, so fork it and rejoin later.
@@ -42,9 +41,6 @@ mkdir symbiflow
     curl $SYMBIFLOW_INSTALL_URL | tar xJ -C symbiflow
 ) &
 FETCH_SYMBIFLOW_PID=$!
-
-# Can't be added to source/patches in meta.yaml due to: https://github.com/conda/conda-build/issues/4118
-patch -p1 < vpr_fix_pgo.patch # Until merged: https://github.com/verilog-to-routing/vtr-verilog-to-routing/pull/1586
 
 export M4=${PREFIX}/bin/m4
 mkdir build
