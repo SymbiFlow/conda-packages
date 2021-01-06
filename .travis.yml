@@ -34,6 +34,9 @@ env:
   - PACKAGE=prjxray-db
   # XXX riscv32 toolchain: disabled as fails to build
   # PACKAGE=riscv32/binutils
+  # symbiflow toolchain
+  - PACKAGE=symbiflow-toolchain
+  - PACKAGE=symbiflow-xc7a50t
   # verilog tools
   - PACKAGE=icestorm
   - PACKAGE=iverilog
