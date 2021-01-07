@@ -32,6 +32,7 @@ env:
   - PACKAGE=openocd
   - PACKAGE=prjxray-tools
   - PACKAGE=prjxray-db
+  - PACKAGE=symbiflow-tools-package-manager
   # XXX riscv32 toolchain: disabled as fails to build
   # PACKAGE=riscv32/binutils
   # verilog tools
