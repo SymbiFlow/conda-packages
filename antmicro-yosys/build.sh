@@ -3,9 +3,7 @@
 set -e
 set -x
 
-if [ x"$TRAVIS" = xtrue ]; then
-	CPU_COUNT=2
-fi
+CPU_COUNT=$(nproc)
 
 #unset CFLAGS
 #unset CXXFLAGS
@@ -19,6 +17,8 @@ which pkg-config
 cd yosys
 
 make V=1 -j$CPU_COUNT
+make install V=1 -j$CPU_COUNT
 cp yosys "$PREFIX/bin/antmicro-yosys"
+cp yosys-config "$PREFIX/bin/yosys-config"
 
 $PREFIX/bin/antmicro-yosys -V

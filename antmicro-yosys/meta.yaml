@@ -21,6 +21,8 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - make
+    - gawk
   host:
     - pkg-config
     - readline
@@ -29,3 +31,11 @@ requirements:
     - libffi
     - flex
     - iverilog
+  run:
+    - readline
+    - tk
+    - libffi
+
+test:
+  commands:
+    - antmicro-yosys -V
